@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           bottomNavigationBar: Container(
             child: TabBar(
               labelColor: Colors.black,
-              unselectedLabelColor: Colors.grey,
+              unselectedLabelColor: Color(0xffEFEFEF),
               indicatorColor: Colors.black,
               indicatorSize: TabBarIndicatorSize.label,
               indicatorWeight: 2,

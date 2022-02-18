@@ -55,7 +55,7 @@ class NewsContainer extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
                           image: DecorationImage(
-                            image: AssetImage('images/tree.jpg'),
+                            image: AssetImage('assets/images/tree.png'),
                             fit: BoxFit.fitWidth,
                           )),
                     ),

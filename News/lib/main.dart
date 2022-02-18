@@ -8,7 +8,7 @@ void main() {
   runApp(const MyApp());
 }
 
-NewsData newsData =NewsData();
+NewsData newsData = NewsData();
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: NewsMain(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -77,7 +78,7 @@ class NewsMain extends StatelessWidget {
                   ),
                   child: IconButton(
                     onPressed: () {},
-                    icon: const Icon(Icons.search, color: Colors.white),
+                    icon: const Icon(Icons., color: Colors.white),
                     iconSize: 35,
                   ),
                 ),
