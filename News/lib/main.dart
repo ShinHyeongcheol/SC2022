@@ -12,11 +12,53 @@ NewsData newsData = NewsData();
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: NewsMain(),
       debugShowCheckedModeBanner: false,
+      title: 'Navigation Bar',
+      theme: ThemeData(primaryColor: Colors.white),
+      home: DefaultTabController(
+        length: 4,
+        child: Scaffold(
+          body: TabBarView(
+            children: [
+              Text('One'),
+              Text('Two'),
+              NewsMain(),
+              Text('Four'),
+            ],
+          ),
+          bottomNavigationBar: Container(
+            child: TabBar(
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.grey,
+              indicatorColor: Colors.black,
+              indicatorSize: TabBarIndicatorSize.label,
+              indicatorWeight: 2,
+              tabs: [
+                Tab(
+                  icon: Icon(Icons.adb),
+                  text: 'one',
+                ),
+                Tab(
+                  icon: Icon(Icons.adb),
+                  text: 'two',
+                ),
+                Tab(
+                  icon: Icon(Icons.adb),
+                  text: 'News',
+                ),
+                Tab(
+                  icon: Icon(Icons.adb),
+                  text: 'four',
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -78,7 +120,7 @@ class NewsMain extends StatelessWidget {
                   ),
                   child: IconButton(
                     onPressed: () {},
-                    icon: const Icon(Icons., color: Colors.white),
+                    icon: const Icon(Icons.search, color: Colors.white),
                     iconSize: 35,
                   ),
                 ),
