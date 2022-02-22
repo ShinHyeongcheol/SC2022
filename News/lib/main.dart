@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
               Text('One'),
               Text('Two'),
               NewsMain(),
-              Text('Four'),
+              Text('Map'),
             ],
           ),
           bottomNavigationBar: Container(
