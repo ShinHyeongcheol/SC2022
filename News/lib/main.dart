@@ -1,14 +1,27 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:quiz/NewsData.dart';
+import 'package:quiz/NewsReport.dart';
 import 'package:quiz/NewsTest.dart';
 import 'NewsContainer.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const test());
 }
 
 NewsData newsData = NewsData();
+
+class test extends StatelessWidget {
+  const test({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: NewsMain(),
+    );
+  }
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:quiz/NewsReport.dart';
 import 'package:quiz/NewsTest.dart';
 
 class NewsContainer extends StatelessWidget {
@@ -45,7 +46,12 @@ class NewsContainer extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => NewsTest()),
+                    MaterialPageRoute(
+                        builder: (context) => NewsReport(
+                            title: title,
+                            subtitle: subtitle,
+                            time: time,
+                            writer: writer)),
                   );
                 },
                 child: Stack(
@@ -94,7 +100,7 @@ class NewsContainer extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(8, 1, 8, 3),
+                              padding: const EdgeInsets.fromLTRB(8, 10, 8, 3),
                               child: Expanded(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
