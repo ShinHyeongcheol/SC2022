@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "915913943243",
+    "project_id": "grow-ecab9",
+    "storage_bucket": "grow-ecab9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915913943243:android:4c79fb7fd81c7eb4c8934e",
+        "android_client_info": {
+          "package_name": "com.example.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915913943243-bctsajm1gsa1tjdk1v49u23u3569ivr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw5iFqp-c5emrHC3R5HxOWpZ6tWrsTNFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915913943243-bctsajm1gsa1tjdk1v49u23u3569ivr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

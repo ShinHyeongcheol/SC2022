@@ -2,25 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:quiz/NewsReport.dart';
 import 'package:quiz/NewsTest.dart';
+import 'package:quiz/NewsData.dart';
+import 'package:quiz/main.dart';
 
-class NewsContainer extends StatelessWidget {
-  const NewsContainer({
+class NewsContainer extends StatefulWidget {
+  NewsContainer({
     Key? key,
+    required this.index,
     required this.title,
-    required this.subtitle,
-    required this.time,
-    required this.writer,
-    this.onPressed,
   }) : super(key: key);
 
+  final int index;
   final String title;
-  final String subtitle;
-  final DateTime time;
-  final String writer;
-  final Function()? onPressed;
 
   @override
+  State<NewsContainer> createState() => _NewsContainerState();
+}
+
+class _NewsContainerState extends State<NewsContainer> {
+  @override
   Widget build(BuildContext context) {
+    String title = widget.title;
+    //String title = datas[widget.index].Newstitle;
+    //String title = newsData.getTitle(widget.index);
+    String subtitle = newsData.getSubtitle(widget.index);
+    String writer = newsData.getWriter(widget.index);
+    DateTime time = newsData.getTime(widget.index);
+    String tag1 = newsData.getTag1(widget.index);
+    String tag2 = newsData.getTag2(widget.index);
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
       child: Container(
@@ -154,7 +164,7 @@ class NewsContainer extends StatelessWidget {
                     child: Container(
                       child: Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: Text('Tag 1'),
+                        child: Text(tag1),
                       ),
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -171,7 +181,7 @@ class NewsContainer extends StatelessWidget {
                     child: Container(
                       child: Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: Text('Tag 2'),
+                        child: Text(tag2),
                       ),
                       decoration: BoxDecoration(
                         color: Colors.white,

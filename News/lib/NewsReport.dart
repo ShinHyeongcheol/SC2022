@@ -116,11 +116,23 @@ class NewsReport extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => NewsTest()),
+                      MaterialPageRoute(builder: (context) => NewsTest()),
                     );
                   },
-                  child: Text('asd'),
+                  child: Text(
+                    'asd',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    side: BorderSide(
+                      color: Color(0xff41B06B),
+                      width: 5.0,
+                    ),
+                    alignment: Alignment.centerLeft,
+                    primary: Colors.white,
+                  ),
                 ),
               )
             ],
