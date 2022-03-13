@@ -100,7 +100,7 @@ class NewsReport extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    color: Colors.pinkAccent,
+                    color: Colors.white,
                     child: ListView(
                       children: <Widget>[
                         Text('기사'),
