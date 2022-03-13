@@ -176,7 +176,10 @@ class _NewsMainState extends State<NewsMain> {
               //itemCount: newsData.getNum(),
               itemBuilder: (BuildContext context, int index) => NewsContainer(
                 index: index,
-                title: snapshot.data!.docs[index]['title'],
+                title: snapshot.data!.docs[index]['Title'],
+                writer: snapshot.data!.docs[index]['Writer'],
+                tag1: snapshot.data!.docs[index]['Tag1'],
+                tag2: snapshot.data!.docs[index]['Tag2'],
               ),
             ),
           );
