@@ -154,7 +154,9 @@ class _NewsMainState extends State<NewsMain> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      FocusScopeNode currentFocus = FocusScope.of(context);
+                      currentFocus.unfocus();},
                     icon: const Icon(Icons.search, color: Colors.white),
                     iconSize: 35,
                   ),
